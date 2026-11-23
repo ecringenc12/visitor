@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+	int say=0;
+	int i;
+	int tut=0;
+	int z[7];
+	for(i=0;i<=6;i++)
+	{
+		printf("%d. gun gelen ziyaretci sayisinii girin-> ",i+1);
+		scanf("%d",&z[i]);
+	}
+	int yuksek=z[0];
+	for(i=0;i<=6;i++)
+	{
+		if(z[i]>yuksek)
+		{
+			yuksek=z[i];
+		}
+	}
+	for(i=0;i<=6;i++)
+	{
+		tut=tut+z[i];
+		if(z[i]>=1000)
+		{
+			say=say+1;
+		}
+	}
+	printf("Haftalik ziyarettci sayisi->%d\n",tut);
+	printf("1000 Barajini asan gun sayisi->%d\n",say);
+	printf("En yuksek gunluk ziyaretci sayisi->%d\n",yuksek);
+	
+	return 0;
+}
